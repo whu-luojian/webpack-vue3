@@ -2,6 +2,7 @@
   "name": "webpack-vue3",
   "version": "0.1.0",
   "private": true,
+  "keywords": ["vue", "vue3", "webpack", "typescript", "demo"],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
