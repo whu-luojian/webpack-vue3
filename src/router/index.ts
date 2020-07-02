@@ -1,10 +1,7 @@
-import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 
-Vue.use(VueRouter);
-
-const routes: Array<RouteConfig> = [
+const routes = [
   {
     path: "/",
     name: "Home",
@@ -21,10 +18,11 @@ const routes: Array<RouteConfig> = [
   }
 ];
 
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
+  routes // todo: 类型错误
 });
 
 export default router;
